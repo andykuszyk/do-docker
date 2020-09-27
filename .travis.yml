@@ -1,0 +1,5 @@
+services:
+  - docker
+sudo: required
+script:
+  - sudo make test
