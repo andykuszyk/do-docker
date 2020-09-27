@@ -1,0 +1,6 @@
+version: "3"
+services:
+    nginx:
+        volumes:
+            - /root/certs-data/:/data/letsencrypt/
+            - /etc/letsencrypt/:/etc/letsencrypt/

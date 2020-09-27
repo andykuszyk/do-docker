@@ -1,0 +1,24 @@
+version: "3"
+services:
+    nginx:
+        image: nginx:latest
+        ports: 
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf
+            - ./certs/:/data/letsencrypt/
+            - ./certs/etc/letsencrypt/:/etc/letsencrypt/
+    akuszyk:
+        image: andykuszyk/akuszyk:af5cd9e
+    marmyandme:
+        image: andykuszyk/marmyandme:5935d31
+    budjot:
+        image: andykuszyk/budjot:840174a
+        environment:
+            - MONGOUSER
+            - MONGOPASSWORD
+    gitlab-issue-comments:
+        image: andykuszyk/gitlab-issue-comments:latest
+        environment:
+            - GITLAB_TOKEN
