@@ -4,8 +4,8 @@ hosts:
 run:
 	docker-compose up -d
 
-sleep:
-	sleep 5
+wait:
+	./wait.sh	
 
-test: hosts run sleep
+test: hosts run wait
 	./test.sh
