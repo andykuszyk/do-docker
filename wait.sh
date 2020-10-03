@@ -1,7 +1,7 @@
 #!/bin/bash
 for i in $(seq 1 30); do
-    output=$(curl http://budjot.com -v 2>&1)
-    if [[ "$(echo $output | grep 301)" == "" ]]; then
+    output=$(curl -L -k http://budjot.com -v 2>&1)
+    if [[ "$(echo $output | grep '200 OK')" == "" ]]; then
         echo "Failed attempt $i, sleeping"
         echo $output
         sleep 1
