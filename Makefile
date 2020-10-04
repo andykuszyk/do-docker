@@ -12,3 +12,6 @@ test: hosts run wait
 
 deploy:
 	./scripts/deploy.sh
+
+release-service:
+	./scripts/release-service.sh $(SERVICE) $(TAG)
