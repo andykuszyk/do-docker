@@ -19,7 +19,7 @@ services:
     marmyandme:
         image: andykuszyk/marmyandme:e30079f
     budjot:
-        image: andykuszyk/budjot:9f3464a
+        image: andykuszyk/budjot:ae2ad36
         depends_on:
           - mongo
         environment:
