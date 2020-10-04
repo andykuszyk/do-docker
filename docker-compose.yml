@@ -17,7 +17,7 @@ services:
     akuszyk:
         image: andykuszyk/akuszyk:0b6bae9
     marmyandme:
-        image: andykuszyk/marmyandme:5935d31
+        image: andykuszyk/marmyandme:e30079f
     budjot:
         image: andykuszyk/budjot:5f824d9
         depends_on:
