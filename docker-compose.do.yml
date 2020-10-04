@@ -4,3 +4,9 @@ services:
         volumes:
             - /root/certs-data/:/data/letsencrypt/
             - /etc/letsencrypt/:/etc/letsencrypt/
+    mongo:
+        volumes:
+            - /data/mongo:/data/db
+    gitlab-issue-comments:
+        environment:
+            - GITLAB_TOKEN=<secret>

@@ -2,6 +2,11 @@ version: "3"
 services:
     nginx:
         image: nginx:latest
+        depends_on:
+            - akuszyk
+            - marmyandme
+            - budjot
+            - gitlab-issue-comments
         ports: 
             - "80:80"
             - "443:443"
@@ -14,11 +19,16 @@ services:
     marmyandme:
         image: andykuszyk/marmyandme:5935d31
     budjot:
-        image: andykuszyk/budjot:840174a
+        image: andykuszyk/budjot:5f824d9
+        depends_on:
+          - mongo
         environment:
-            - MONGOUSER
-            - MONGOPASSWORD
+          - MONGOURL=mongodb://mongo:27017/budjot
+    mongo:
+        image: mongo:latest
+        volumes:
+          - $HOME/.mongo:/data/db 
     gitlab-issue-comments:
         image: andykuszyk/gitlab-issue-comments:latest
         environment:
-            - GITLAB_TOKEN
+            - GITLAB_TOKEN=abc123
