@@ -1,11 +1,14 @@
 hosts:
-	./hosts.sh
+	./scripts/hosts.sh
 
 run:
 	docker-compose up -d
 
 wait:
-	./wait.sh	
+	./scripts/wait.sh	
 
 test: hosts run wait
-	./test.sh
+	./scripts/test.sh
+
+deploy:
+	./scripts/deploy.sh

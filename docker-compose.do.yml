@@ -9,4 +9,4 @@ services:
             - /data/mongo:/data/db
     gitlab-issue-comments:
         environment:
-            - GITLAB_TOKEN=<secret>
+            - GITLAB_TOKEN=gitlabtoken
