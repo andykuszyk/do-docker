@@ -2,6 +2,7 @@ version: "3"
 services:
     nginx:
         volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf
             - /root/certs-data/:/data/letsencrypt/
             - /etc/letsencrypt/:/etc/letsencrypt/
     mongo:
