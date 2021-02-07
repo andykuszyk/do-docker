@@ -15,7 +15,7 @@ services:
             - ./certs/:/data/letsencrypt/
             - ./certs/etc/letsencrypt/:/etc/letsencrypt/
     akuszyk:
-        image: andykuszyk/akuszyk:2c669b3
+        image: andykuszyk/akuszyk:da33d21
     marmyandme:
         image: andykuszyk/marmyandme:e30079f
     budjot:
