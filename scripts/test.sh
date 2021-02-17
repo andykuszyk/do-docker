@@ -16,3 +16,5 @@ test http://akuszyk.com
 test https://akuszyk.com
 test http://marmyandme.co.uk
 test https://marmyandme.co.uk
+test http://shop.marmyandme.co.uk
+test https://shop.marmyandme.co.uk

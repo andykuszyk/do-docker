@@ -1,13 +1,18 @@
 hosts:
 	./scripts/hosts.sh
 
-run:
+run: hosts
 	docker-compose up -d
+
+restart: down run
+
+down:
+	docker-compose down
 
 wait:
 	./scripts/wait.sh	
 
-test: hosts run wait
+test: run wait
 	./scripts/test.sh
 
 deploy:
