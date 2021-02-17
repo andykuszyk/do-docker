@@ -19,3 +19,16 @@ Services that are deployed through this repo can be updated to newer versions us
 ```sh
 make release-service SERVICE=akuszyk TAG=latest
 ```
+
+## Certificate creation using LetsEncrypt
+* `ssh` onto the Docker host
+* Manually edit the `nginx.conf` and add an additional `location` directive to the server that needs a certificate like the example below:
+```conf
+location ^~ /.well-known {
+    allow all;
+    root /data/letsencrypt/;
+}
+```
+* Restart the `nginx` Docker container (`docker kill`)
+* `sudo certbot certonly --webroot -w /root/certs-data/ -d <dns-name>.co.uk -d www.<dns-name>.co.uk
+* Add an HTTP redirect to the `nginx` config and an SSL block to the server configuration.
