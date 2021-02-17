@@ -15,3 +15,4 @@ test https://budjot.com
 test http://akuszyk.com
 test https://akuszyk.com
 test http://marmyandme.co.uk
+test https://marmyandme.co.uk
