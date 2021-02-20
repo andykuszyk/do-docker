@@ -24,8 +24,8 @@ services:
           - OPENCART_DATABASE_PASSWORD=opencart_database_password
           - OPENCART_DATABASE_NAME=opencart
         volumes:
-          - /etc/letsencrypt/live/marmyandme.co.uk/privkey.pem:/certs/server.key
-          - /etc/letsencrypt/live/marmyandme.co.uk/fullchain.pem:/certs/server.crt
+          - /etc/letsencrypt/live/shop.marmyandme.co.uk/privkey.pem:/certs/server.key
+          - /etc/letsencrypt/live/shop.armyandme.co.uk/fullchain.pem:/certs/server.crt
           - /mnt/docker_1/opencart:/bitnami/opencart
     mariadb:
         environment:
