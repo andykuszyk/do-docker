@@ -34,6 +34,7 @@ services:
             - GITLAB_TOKEN=abc123
     opencart:
         image: bitnami/opencart:3.0.3-6
+        user: root
         environment:
           - OPENCART_HOST=shop.marmyandme.co.uk
           - OPENCART_USERNAME=test
@@ -50,6 +51,7 @@ services:
           - ./certs/etc/letsencrypt/live/marmyandme.co.uk/fullchain.pem:/certs/server.crt
     mariadb:
       image: bitnami/mariadb:10.5.8
+      user: root
       environment:
         - MARIADB_USER=opencart
         - MARIADB_PASSWORD=opencart
