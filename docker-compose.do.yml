@@ -27,6 +27,7 @@ services:
           - /etc/letsencrypt/live/shop.marmyandme.co.uk/privkey.pem:/certs/server.key
           - /etc/letsencrypt/live/shop.marmyandme.co.uk/fullchain.pem:/certs/server.crt
           - /mnt/docker_1/opencart:/bitnami/opencart
+          - /mnt/docker_1/opencart_storage:/bitnami/opencart_storage
     mariadb:
         environment:
           - MARIADB_USER=opencart_database_user
