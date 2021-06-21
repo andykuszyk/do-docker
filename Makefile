@@ -25,3 +25,8 @@ install-yq:
 	wget https://github.com/mikefarah/yq/releases/download/3.4.0/yq_linux_amd64
 	chmod +x yq_linux_amd64
 	sudo mv yq_linux_amd64 /usr/bin/yq
+
+clean-data-volumes:
+	rm -rf ./volumes
+	mkdir -p ./volumes/opencart
+	mkdir -p ./volumes/mariadb/data
