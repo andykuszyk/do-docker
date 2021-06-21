@@ -18,3 +18,5 @@ test http://marmyandme.co.uk
 test https://marmyandme.co.uk
 test http://shop.marmyandme.co.uk
 test https://shop.marmyandme.co.uk
+test http://cronical.net
+test https://cronical.net

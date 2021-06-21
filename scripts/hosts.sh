@@ -10,6 +10,7 @@ add_host 'budjot.com'
 add_host 'akuszyk.com'
 add_host 'marmyandme.co.uk'
 add_host 'shop.marmyandme.co.uk'
+add_host 'cronical.net'
 
 echo "/etc/hosts now looks like this:"
 cat /etc/hosts
