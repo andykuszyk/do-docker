@@ -19,6 +19,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
       - run: sudo make test
-      - run: echo -n "$ID_RSA" > id_rsa && chmod 700 id_rsa
+      - run: printf "$ID_RSA" > id_rsa && chmod 700 id_rsa
       - run: make install-yq
       - run: make deploy
