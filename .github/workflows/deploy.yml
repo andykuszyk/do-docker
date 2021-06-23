@@ -5,15 +5,16 @@ jobs:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
-      OPENCART_USERNAME: ${{ secrets. OPENCART_USERNAME }}
-      OPENCART_PASSWORD: ${{ secrets. OPENCART_PASSWORD }}
-      OPENCART_EMAIL: ${{ secrets. OPENCART_EMAIL }}
-      OPENCART_DATABASE_USER: ${{ secrets. OPENCART_DATABASE_USER }}
-      OPENCART_DATABASE_PASSWORD: ${{ secrets. OPENCART_DATABASE_PASSWORD }}
-      MARIADB_ROOT_PASSWORD: ${{ secrets. MARIADB_ROOT_PASSWORD }}
-      DOUSER: ${{ secrets. DOUSER }}
-      DOIP: ${{ secrets. DOIP }}
-      ID_RSA: ${{ secrets. ID_RSA }}
+      OPENCART_USERNAME: ${{ secrets.OPENCART_USERNAME }}
+      OPENCART_PASSWORD: ${{ secrets.OPENCART_PASSWORD }}
+      OPENCART_EMAIL: ${{ secrets.OPENCART_EMAIL }}
+      OPENCART_DATABASE_USER: ${{ secrets.OPENCART_DATABASE_USER }}
+      OPENCART_DATABASE_PASSWORD: ${{ secrets.OPENCART_DATABASE_PASSWORD }}
+      MARIADB_ROOT_PASSWORD: ${{ secrets.MARIADB_ROOT_PASSWORD }}
+      DOUSER: ${{ secrets.DOUSER }}
+      DOIP: ${{ secrets.DOIP }}
+      ID_RSA: ${{ secrets.ID_RSA }}
+      KNOWN_HOSTS: ${{ secrets.KNOWN_HOSTS }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
