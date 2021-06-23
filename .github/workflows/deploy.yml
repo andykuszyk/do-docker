@@ -19,9 +19,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+      - run: sudo make test
       - run: echo "$ID_RSA" > id_rsa && chmod 700 id_rsa
       - run: mkdir -p ~/.ssh
       - run: echo "$KNOWN_HOSTS" > ~/.ssh/known_hosts
-      - run: cat ~/.ssh/known_hosts
       - run: make install-yq
       - run: make deploy
