@@ -7,7 +7,7 @@ services:
             - /etc/letsencrypt/:/etc/letsencrypt/
     mongo:
         volumes:
-            - /data/mongo:/data/db
+            - /mnt/docker_1/mongo:/data/db
     gitlab-issue-comments:
         environment:
             - GITLAB_TOKEN=gitlabtoken
