@@ -32,3 +32,6 @@ location ^~ /.well-known {
 * Restart the `nginx` Docker container (`docker kill`)
 * `sudo certbot certonly --webroot -w /root/certs-data/ -d <dns-name>.co.uk -d www.<dns-name>.co.uk`
 * Add an HTTP redirect to the `nginx` config and an SSL block to the server configuration.
+
+## Setting up a new server
+See the `initialise-server.sh` for instructions and installation functions.
