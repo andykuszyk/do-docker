@@ -3,7 +3,6 @@ services:
     nginx:
         image: nginx:latest
         depends_on:
-            - akuszyk
             - marmyandme
             - budjot
             - gitlab-issue-comments
@@ -16,8 +15,6 @@ services:
             - ./certs/etc/letsencrypt/:/etc/letsencrypt/
     cronical:
         image: andykuszyk/cronical:v1.0.0
-    akuszyk:
-        image: andykuszyk/akuszyk:479e91f
     marmyandme:
         image: andykuszyk/marmyandme:e30079f
     budjot:
