@@ -3,7 +3,6 @@ services:
     nginx:
         image: nginx:latest
         depends_on:
-            - marmyandme
             - budjot
             - gitlab-issue-comments
         ports: 
@@ -15,8 +14,6 @@ services:
             - ./certs/etc/letsencrypt/:/etc/letsencrypt/
     cronical:
         image: andykuszyk/cronical:v1.0.0
-    marmyandme:
-        image: andykuszyk/marmyandme:e30079f
     budjot:
         image: andykuszyk/budjot:ae2ad36
         depends_on:
@@ -31,32 +28,3 @@ services:
         image: andykuszyk/gitlab-issue-comments:latest
         environment:
             - GITLAB_TOKEN=abc123
-    opencart:
-        image: bitnami/opencart:3.0.3-6-debian-10-r184
-        user: root
-        environment:
-          - OPENCART_HOST=shop.marmyandme.co.uk
-          - OPENCART_USERNAME=test
-          - OPENCART_PASSWORD=test
-          - OPENCART_EMAIL=test@test.com
-          - OPENCART_ENABLE_HTTPS=yes
-          - OPENCART_DATABASE_HOST=mariadb
-          - OPENCART_DATABASE_PORT_NUMBER=3306
-          - OPENCART_DATABASE_USER=opencart
-          - OPENCART_DATABASE_PASSWORD=opencart
-          - OPENCART_DATABASE_NAME=opencart
-        volumes:
-          - ./certs/etc/letsencrypt/live/marmyandme.co.uk/privkey.pem:/certs/server.key
-          - ./certs/etc/letsencrypt/live/marmyandme.co.uk/fullchain.pem:/certs/server.crt
-          - ./volumes/opencart:/bitnami/opencart
-          - ./volumes/opencart_storage:/bitnami/opencart_storage
-    mariadb:
-      image: bitnami/mariadb:10.5.8
-      user: root
-      environment:
-        - MARIADB_USER=opencart
-        - MARIADB_PASSWORD=opencart
-        - MARIADB_DATABASE=opencart
-        - MARIADB_ROOT_PASSWORD=root
-      volumes:
-        - ./volumes/mariadb:/bitnami/mariadb

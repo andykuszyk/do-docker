@@ -11,28 +11,3 @@ services:
     gitlab-issue-comments:
         environment:
             - GITLAB_TOKEN=gitlabtoken
-    opencart:
-        environment:
-          - OPENCART_HOST=shop.marmyandme.co.uk
-          - OPENCART_USERNAME=opencart_username
-          - OPENCART_PASSWORD=opencart_password
-          - OPENCART_EMAIL=opencart_email
-          - OPENCART_ENABLE_HTTPS=yes
-          - OPENCART_DATABASE_HOST=mariadb
-          - OPENCART_DATABASE_PORT_NUMBER=3306
-          - OPENCART_DATABASE_USER=opencart_database_user
-          - OPENCART_DATABASE_PASSWORD=opencart_database_password
-          - OPENCART_DATABASE_NAME=opencart
-        volumes:
-          - /etc/letsencrypt/live/marmyandme.co.uk/privkey.pem:/certs/server.key
-          - /etc/letsencrypt/live/marmyandme.co.uk/fullchain.pem:/certs/server.crt
-          - /mnt/docker_1/opencart:/bitnami/opencart
-          - /mnt/docker_1/opencart_storage:/bitnami/opencart_storage
-    mariadb:
-        environment:
-          - MARIADB_USER=opencart_database_user
-          - MARIADB_PASSWORD=opencart_database_password
-          - MARIADB_DATABASE=opencart
-          - MARIADB_ROOT_PASSWORD=mariadb_root_password
-        volumes:
-          - /mnt/docker_1/mariadb:/bitnami/mariadb

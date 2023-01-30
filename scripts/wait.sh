@@ -1,6 +1,6 @@
 #!/bin/bash
 for i in $(seq 1 30); do
-    output=$(curl -L -k https://shop.marmyandme.co.uk -v 2>&1)
+    output=$(curl -L -k https://www.budjot.com -v 2>&1)
     if [[ "$(echo $output | grep '200 OK')" == "" ]]; then
         echo "Failed attempt $i, sleeping"
         echo $output
