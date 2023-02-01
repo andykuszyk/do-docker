@@ -14,3 +14,5 @@ test http://budjot.com
 test https://budjot.com
 test http://cronical.net
 test https://cronical.net
+test http://akuszyk.com
+test https://akuszyk.com

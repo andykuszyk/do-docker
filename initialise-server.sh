@@ -33,7 +33,7 @@ function setup_docker_swarm() {
 }
 
 function generate_certificates() {
-    for site in cronical.net budjot.com; do
+    for site in akuszyk.com cronical.net budjot.com; do
         echo "===> Generating TLS certificate for $site"
         sudo certbot certonly --webroot -w /root/certs-data/ -d "$site" -d "www.$site"
     done
