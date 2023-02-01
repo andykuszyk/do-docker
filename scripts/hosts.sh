@@ -8,6 +8,7 @@ function add_host() {
 
 add_host 'budjot.com'
 add_host 'cronical.net'
+add_host 'akuszyk.com'
 
 echo "/etc/hosts now looks like this:"
 cat /etc/hosts
