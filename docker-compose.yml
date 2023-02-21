@@ -28,3 +28,8 @@ services:
         image: andykuszyk/gitlab-issue-comments:latest
         environment:
             - GITLAB_TOKEN=abc123
+    promtail:
+      image: grafana/promtail:master
+      volumes:
+        - ./promtail.yaml:/etc/promtail/config.yaml
+        - /var/log:/var/log
