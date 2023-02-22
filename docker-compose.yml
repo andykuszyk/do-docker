@@ -31,5 +31,5 @@ services:
     promtail:
       image: grafana/promtail:master
       volumes:
-        - ./promtail.yaml:/etc/promtail/config.yaml
+        - ./promtail.yaml:/etc/promtail/config.yml
         - /var/log:/var/log
