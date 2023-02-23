@@ -5,6 +5,7 @@ services:
             - ./nginx.conf:/etc/nginx/nginx.conf
             - /root/certs-data/:/data/letsencrypt/
             - /etc/letsencrypt/:/etc/letsencrypt/
+            - /var/log/nginx/:/var/log/nginx/
     mongo:
         volumes:
             - /mnt/docker_1/mongo:/data/db
